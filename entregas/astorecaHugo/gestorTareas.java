@@ -1,8 +1,8 @@
+
 import java.util.Scanner;
 
-
-
 class gestorTareas {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] tareas = new String[10];
@@ -24,38 +24,37 @@ class gestorTareas {
             if (opcion == 1) {
                 if (numTareas < 10) {
                     System.out.print("Descripcion de la nueva tarea: ");
-                    tareas[numTareas]= sc.nextLine();
+                    tareas[numTareas] = sc.nextLine();
                     completadas[numTareas] = false;
-                    numTareas++; 
+                    numTareas++;
                     System.out.println("Tarea anadida correctamente.");
                 } else {
                     System.out.println("ERROR: No se pueden anadir mas tareas, limite alcanzado.");
                 }
-            
-            
-                if (opcion == 2) {
-                System.out.println("Tareas para Marcar");
-                if (numTareas == 0){
-                    System.out.println("No hay tareas para marcar.");
 
-                }else{
-                    System.out.println("Tareas");
-                    for (int i = 0; i < numTareas; i++) {
-                        System.out.println((i + 1) + ". " + tareas[i] + " [" + (completadas[i] ? "Completada" : "Pendiente") + "]");
-                }
-                System.out.println("Ingrese el numero de la tarea que desea marcar como completada: ");
-                int num = sc.nextInt();
-                if (num>=1 && num<=numTareas){
-                    if (!completadas[num - 1]) {
-                        completadas[num - 1] = true;
-                        System.out.println("Tarea marcada como completada.");
+                if (opcion == 2) {
+                    System.out.println("Tareas para Marcar");
+                    if (numTareas == 0) {
+                        System.out.println("No hay tareas para marcar.");
+
                     } else {
-                        System.out.println("Esta tarea ya estaba completada.");
+                        System.out.println("Tareas");
+                        for (int i = 0; i < numTareas; i++) {
+                            System.out.println((i + 1) + ". " + tareas[i] + " [" + (completadas[i] ? "Completada" : "Pendiente") + "]");
+                        }
+                        System.out.println("Ingrese el numero de la tarea que desea marcar como completada: ");
+                        int num = sc.nextInt();
+                        if (num >= 1 && num <= numTareas) {
+                            if (!completadas[num - 1]) {
+                                completadas[num - 1] = true;
+                                System.out.println("Tarea marcada como completada.");
+                            } else {
+                                System.out.println("Esta tarea ya estaba completada.");
+                            }
+                        } else {
+                            System.out.println("Numero de tarea invalido.");
+                        }
                     }
-                } else {
-                    System.out.println("Numero de tarea invalido.");
-                }
-            } 
                 }
             } else if (opcion == 3) {
                 System.out.println("Tareas Pendientes");
@@ -81,13 +80,12 @@ class gestorTareas {
                 System.out.println("Tareas completadas: " + contCompletadas);
                 System.out.println("Tareas pendientes: " + (numTareas - contCompletadas));
                 if (numTareas > 0) {
-                    System.out.println("Porcentaje completado:"+ (contCompletadas *100 / numTareas)+"%");
+                    System.out.println("Porcentaje completado:" + (contCompletadas * 100 / numTareas) + "%");
                 }
             } else if (opcion == 5) {
                 System.out.println("Saliendo del gestor de tareas.");
                 break;
-            } else {
-                System.out.println("Opcion no valida. Intente de nuevo.");
+
             }
         }
         sc.close();
