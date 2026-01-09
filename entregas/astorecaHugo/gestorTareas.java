@@ -22,8 +22,7 @@ class gestorTareas {
             if (opcion == 1) {
                 if (numTareas < 10) {
                     System.out.print("Descripcion de la nueva tarea: ");
-                    String d = sc.nextLine();
-                    tareas[numTareas] = d;
+                    tareas[numTareas]= sc.nextLine();
                     completadas[numTareas] = false;
                     numTareas++; 
                     System.out.println("Tarea anadida correctamente.");
