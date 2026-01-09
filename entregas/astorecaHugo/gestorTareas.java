@@ -72,7 +72,7 @@ class gestorTareas {
                     }
                 }
                 if (!hayPendientes) {
-                    System.out.println("(No hay tareas pendientes)");
+                    System.out.println("No hay tareas pendientes");
                 }
             } else if (opcion == 4) {
                 System.out.println("Estadisticas");
