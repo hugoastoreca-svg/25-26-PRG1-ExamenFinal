@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import javax.sound.sampled.SourceDataLine;
+
 
 class gestorTareas {
     public static void main(String[] args) {
@@ -55,12 +55,7 @@ class gestorTareas {
                 } else {
                     System.out.println("Numero de tarea invalido.");
                 }
-            }
-                
-                
-            
-                
-                
+            } 
                 }
             } else if (opcion == 3) {
                 System.out.println("Tareas Pendientes");
@@ -86,8 +81,7 @@ class gestorTareas {
                 System.out.println("Tareas completadas: " + contCompletadas);
                 System.out.println("Tareas pendientes: " + (numTareas - contCompletadas));
                 if (numTareas > 0) {
-                    double porc = (contCompletadas * 100.0) / numTareas;
-                    System.out.println("Porcentaje de completacion: " + porc + "%");
+                    System.out.println("Porcentaje completado:"+ (contCompletadas *100 / numTareas)+"%");
                 }
             } else if (opcion == 5) {
                 System.out.println("Saliendo del gestor de tareas.");
