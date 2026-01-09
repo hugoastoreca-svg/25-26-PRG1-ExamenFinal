@@ -12,15 +12,21 @@ class GestorTareas {
 
         System.out.println("Gestor de Tareas v1.0");
 
+        String[] menu = {
+            "Añadir tarea",
+            "Marcar tarea",
+            "Pendientes",
+            "Estadísticas",
+            "Salir"
+        };
         while (true) {
-            System.out.println("[1] Anadir tarea");
-            System.out.println("[2] Marcar tarea como completada");
-            System.out.println("[3] Ver tareas pendientes");
-            System.out.println("[4] Ver estadisticas");
-            System.out.println("[5] Salir");
-            System.out.print("Opcion: ");
+            for (int i = 0; i < menu.length; i++) {
+                System.out.println("[" + (i + 1) + "] " + menu[i]);
+            }
+            System.out.print("Opción: ");
             int opcion = sc.nextInt();
             sc.nextLine();
+
             if (opcion == 1) {
                 if (numTareas < 10) {
                     System.out.print("Descripcion de la nueva tarea: ");
@@ -85,6 +91,7 @@ class GestorTareas {
 
             }
         }
+
         sc.close();
     }
 }
