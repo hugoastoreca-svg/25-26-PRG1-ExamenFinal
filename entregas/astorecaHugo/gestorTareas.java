@@ -32,7 +32,7 @@ class gestorTareas {
                     System.out.println("ERROR: No se pueden anadir mas tareas, limite alcanzado.");
                 }
 
-                if (opcion == 2) {
+            }else if (opcion == 2) {
                     System.out.println("Tareas para Marcar");
                     if (numTareas == 0) {
                         System.out.println("No hay tareas para marcar.");
@@ -55,7 +55,7 @@ class gestorTareas {
                             System.out.println("Numero de tarea invalido.");
                         }
                     }
-                }
+                
             } else if (opcion == 3) {
                 System.out.println("Tareas Pendientes");
                 boolean hayPendientes = false;
